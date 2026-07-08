@@ -18,9 +18,7 @@
 
 ## 1. Objetivo
 
-Desarrollar una plataforma que permita administrar de forma eficiente el proceso de creación y seguimiento de órdenes de compra de productos y servicios, centralizando 
-la información de clientes y órdenes, garantizando la trazabilidad de cada solicitud y proporcionando una base sólida para futuras funcionalidades como pagos, 
-notificaciones e integración con otros sistemas.
+Desarrollar una plataforma que permita administrar de forma eficiente el proceso de creación y seguimiento de órdenes de compra de productos y servicios, centralizando la información de clientes y órdenes, garantizando la trazabilidad de cada solicitud y proporcionando una base sólida para futuras funcionalidades como pagos, notificaciones e integración con otros sistemas.
 
 ## 2. Problema que resuelve
 
