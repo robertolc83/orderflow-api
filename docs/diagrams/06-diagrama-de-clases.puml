@@ -1,0 +1,47 @@
+@startuml
+
+title Diagrama de Clases - OrderFlow
+
+skinparam classAttributeIconSize 0
+hide empty members
+
+class Customer {
+    - id : Long
+    - name : String
+    - email : String
+    - phone : String
+    - active : Boolean
+}
+
+class Order {
+    - id : Long
+    - status : OrderStatus
+    - createdAt : LocalDateTime
+    - updatedAt : LocalDateTime
+    
+    + calculateTotalAmount() : BigDecimal
+}
+
+class OrderItem {
+    - id : Long
+    - productName : String
+    - quantity : int
+    - unitPrice : BigDecimal
+    
+    + calculateTotalPrice() : BigDecimal
+}
+
+enum OrderStatus {
+    CREATED
+    PROCESSING
+    COMPLETED
+    CANCELED
+}
+
+Customer "1" --> "*" Order : orders
+
+Order "1" *-- "*" OrderItem : items
+
+Order --> OrderStatus : status
+
+@enduml

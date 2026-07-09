@@ -1,0 +1,27 @@
+@startuml
+
+title Modelo del Dominio - OrderFlow
+
+hide empty members
+
+class Cliente 
+
+class Orden
+
+class Item
+
+enum Estado {
+    CREATED
+    PROCESSING
+    COMPLETED
+    CANCELED
+}
+
+Cliente "1" -- "*" Orden : realiza
+
+Orden "1" *-- "*" Item : contiene
+
+Orden --> Estado : tiene
+
+
+@enduml
