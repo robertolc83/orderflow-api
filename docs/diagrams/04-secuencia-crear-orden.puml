@@ -1,0 +1,28 @@
+@startuml
+
+title Secuencia Crear Orden - OrderFlow
+
+actor Cliente
+
+participant Sistema
+participant Orden
+
+
+Cliente -> Sistema : Solicitar creación de orden
+
+Sistema -> Sistema : Validar información
+
+Sistema -> Sistema : Validar cliente existente
+
+Sistema -> Orden : Crear orden
+
+Orden -> Orden : Asignar estado CREATED
+
+Orden -> Orden : Calcular totales
+
+Sistema <-- Orden : Orden creada
+
+Sistema --> Cliente : Confirmación de creación
+
+
+@enduml

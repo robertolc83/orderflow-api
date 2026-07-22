@@ -77,3 +77,21 @@ Serán calculados automáticamente.
 ## Justificación
 
 Evitar inconsistencias entre el detalle de la orden y el total.
+
+# ADR-004
+
+## Título
+
+Adoptar arquitectura hexagonal ligera
+
+## Contexto
+
+El sistema requiere separar dominio y tecnología.
+
+## Decisión
+
+Usar separación Domain/Application/Infrastructure.
+
+## Justificación
+
+Mayor claridad, ligera complejidad inicial.

@@ -1,9 +1,9 @@
-package com.example.orders_backend.entity;
+package com.example.orderflow.domain.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.example.orders_backend.enums.OrderStatus;
+import com.example.orderflow.enums.OrderStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

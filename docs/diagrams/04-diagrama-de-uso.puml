@@ -1,0 +1,22 @@
+@startuml
+
+title Casos de Uso - OrderFlow
+
+actor Cliente
+actor Administrador
+
+rectangle OrderFlow {
+
+usecase "Crear Orden" as UC1
+usecase "Consultar Ordenes" as UC2
+usecase "Gestionar Estado Orden" as UC3
+
+}
+
+Cliente --> UC1
+
+Administrador --> UC1
+Administrador --> UC2
+Administrador --> UC3
+
+@enduml

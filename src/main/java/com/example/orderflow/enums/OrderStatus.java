@@ -1,4 +1,4 @@
-package com.example.orders_backend.enums;
+package com.example.orderflow.enums;
 
 public enum OrderStatus {
 

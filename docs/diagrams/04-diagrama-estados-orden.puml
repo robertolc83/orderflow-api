@@ -1,0 +1,23 @@
+@startuml
+
+title Ciclo de Vida de una Orden - OrderFlow
+
+
+[*] --> CREATED
+
+
+CREATED --> PROCESSING : Iniciar procesamiento
+
+PROCESSING --> COMPLETED : Completar orden
+
+CREATED --> CANCELED : Cancelar orden
+
+PROCESSING --> CANCELED : Cancelar orden
+
+
+COMPLETED --> [*]
+
+CANCELED --> [*]
+
+
+@enduml

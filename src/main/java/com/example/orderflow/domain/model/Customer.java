@@ -1,4 +1,4 @@
-package com.example.orders_backend.entity;
+package com.example.orderflow.domain.model;
 
 import java.util.List;
 

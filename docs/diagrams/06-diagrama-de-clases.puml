@@ -3,6 +3,7 @@
 title Diagrama de Clases - OrderFlow
 
 skinparam classAttributeIconSize 0
+skinparam linetype ortho
 hide empty members
 
 class Customer {

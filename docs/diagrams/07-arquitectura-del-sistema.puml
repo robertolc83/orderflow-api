@@ -1,0 +1,61 @@
+@startuml
+
+title Arquitectura Hexagonal Ligera - OrderFlow
+
+
+skinparam componentStyle rectangle
+
+
+package "Infrastructure" {
+
+    component "REST Controller" as Controller
+
+    component "JPA Adapter" as JpaAdapter
+
+    database "PostgreSQL" as Database
+}
+
+
+package "Application" {
+
+    component "Use Cases" as UseCases
+
+    interface "Order Repository Port" as OrderPort
+}
+
+
+package "Domain" {
+
+    component "Customer" as Customer
+
+    component "Order" as Order
+
+    component "OrderItem" as OrderItem
+
+    component "OrderStatus" as Status
+}
+
+
+Controller --> UseCases
+
+
+UseCases --> OrderPort
+
+
+OrderPort <.. JpaAdapter
+
+
+JpaAdapter --> Database
+
+
+UseCases --> Order
+
+
+Order --> OrderItem
+
+Order --> Status
+
+Order --> Customer
+
+
+@enduml
